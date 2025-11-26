@@ -24,6 +24,10 @@ class App {
 
         lastWiseSayingId++;
 
+        int id = lastWiseSayingId;
+
+        Quotation quotation = new Quotation(id, content, authorName);
+
         System.out.printf("%d번 명언이 등록되었습니다.\n", lastWiseSayingId);
       }
     }
