@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+//
 class App {
   void run() {
     System.out.println("== 명언 앱 ==");
