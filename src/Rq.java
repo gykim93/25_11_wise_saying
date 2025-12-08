@@ -23,25 +23,27 @@ public class Rq {
     queryString = cmdBits[1].trim();
 
     String[] queryStringBits = queryString.split("&");
-    for (int i = 0; i < queryStringBits.length; i++){
+    for (int i = 0; i < queryStringBits.length; i++) {
       String queryParamStr = queryStringBits[i];
       String[] queryParamStrBits = queryParamStr.split("=", 2);
 
       String paramName = queryParamStrBits[0];
       String paramValue = queryParamStrBits[1];
 
-      paramsMap.put(paramName,paramValue);
+      paramsMap.put(paramName, paramValue);
     }
   }
-  String getAction(){
+
+  String getAction() {
     return action;
   }
-  public int getParamAsInt(String paramName, int defaultvalue){
+
+  public int getParamAsInt(String paramName, int defaultvalue) {
     String paramValue = paramsMap.get(paramName);
     if (paramName != null) {
       try {
         return Integer.parseInt(paramValue);
-      }catch (NumberFormatException e) {
+      } catch (NumberFormatException e) {
         return defaultvalue;
       }
     }
